@@ -7,18 +7,18 @@ import { StatusBar } from "expo-status-bar";
 import { Platform } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-import HomeScreen from "../screens/homeScreen";
-import FightScreen from "../screens/fightScreen";
-import ProductScreen from "../screens/productScreen";
-import CommunityScreen from "../screens/communityScreen";
-import LoginScreen from "../screens/auth/loginScreen";
-import RegisterScreen from "../screens/auth/registerScreen";
-import FightOptionScreen from "../screens/fightOptionScreen";
-import PokemonScreen from "../screens/pokemonScreen";
-import DeckScreen from "../screens/deckScreen";
-import DeckDetailScreen from "../screens/deckDetailScreen";
+import HomeScreen from "../Screens/HomeScreen";
+// import FightScreen from "../screens/fightScreen";
+// import ProductScreen from "../screens/productScreen";
+// import CommunityScreen from "../screens/communityScreen";
+// import LoginScreen from "../screens/auth/loginScreen";
+// import RegisterScreen from "../screens/auth/registerScreen";
+// import FightOptionScreen from "../screens/fightOptionScreen";
+// import PokemonScreen from "../screens/pokemonScreen";
+// import DeckScreen from "../screens/deckScreen";
+// import DeckDetailScreen from "../screens/deckDetailScreen";
 import Toast from "react-native-toast-message";
-import CardCollectionScreen from "../screens/cardCollectionScreen";
+// import CardCollectionScreen from "../screens/cardCollectionScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -39,10 +39,10 @@ const MainTabs = () => (
       tabBarInactiveTintColor: "gray",
     })}
   >
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Product" component={ProductScreen} />
+   <Tab.Screen name="Home" component={HomeScreen} />
+     {/* <Tab.Screen name="Product" component={ProductScreen} />
     <Tab.Screen name="Community" component={CommunityScreen} />
-    <Tab.Screen name="Fight" component={FightScreen} />
+    <Tab.Screen name="Fight" component={FightScreen} /> */}
   </Tab.Navigator>
 );
 
@@ -65,11 +65,12 @@ const AppNavigator = () => {
       />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen
+           <Stack.Screen
             name="Main"
             component={MainTabs}
             options={{ headerShown: false }}
           />
+        {/*
           <Stack.Screen
             name="Login"
             component={LoginScreen}
@@ -104,7 +105,7 @@ const AppNavigator = () => {
             name="CardCollection"
             component={CardCollectionScreen}
             options={{ headerShown: false }}
-          />
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
       <Toast />
